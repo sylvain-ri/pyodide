@@ -1,0 +1,70 @@
+package:
+  name: spacy
+  version: 3.1.3
+source:
+  url: https://files.pythonhosted.org/packages/54/c9/95f5a8db73f8ab05b6dbf2a1727d8d77daedf7edfec469af59f57a08d8e7/spacy-3.1.3.tar.gz
+  sha256: 58084e64a27997192ea48f18abb30ec148c5bbe79d04d17ba4d2fc262100c2a2
+
+
+requirements:
+#  build:
+#    - python                                 # [build_platform != target_platform]
+#    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+#    - cython                                 # [build_platform != target_platform]
+#    - numpy                                  # [build_platform != target_platform]
+#    # - {{ compiler('cxx') }}
+#  host:
+#    - pip
+#    - python
+#    - numpy
+#    - setuptools
+#    - wheel
+#    - cython >=0.25,<3.0
+#    - murmurhash >=0.28.0,<1.1.0
+#    - cymem >=2.0.2,<2.1.0
+#    - preshed >=3.0.2,<3.1.0
+#    - thinc >=8.0.8,<8.1.0
+#    - cython-blis >=0.4.0,<0.8.0
+  run:
+#    - python
+    # Our libraries
+    - spacy-legacy
+    - murmurhash
+    - cymem
+    - preshed
+    - thinc
+    - cython-blis
+    - wasabi
+    - srsly
+#    - catalogue  # Pure python
+    # Exclude typer with unpinned click
+    - typer
+    - pathy
+    # Third-party dependencies
+    - tqdm
+    - numpy
+#    - requests  # Pure Python
+#    - pydantic  # Pure Python
+    - jinja2
+    # Official Python utilities
+    - setuptools
+    - packaging
+    - typing_extensions
+
+test:
+  imports:
+    - spacy
+#  requires:
+    - pytest
+    - pytest-timeout
+    - mock
+    - hypothesis
+    - importlib-metadata ==3.3.0  # [py<38]
+#  commands:
+    - python -m pytest --tb=native --pyargs spacy
+
+about:
+  home: https://spacy.io
+  PyPi: https://pypi.org/project/spacy
+  summary: Industrial-strength Natural Language Processing (NLP) in Python
+  license: MIT

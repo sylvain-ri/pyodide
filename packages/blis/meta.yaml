@@ -1,0 +1,14 @@
+package:
+  name: blis
+  version: 0.7.4
+source:
+  url: https://files.pythonhosted.org/packages/b1/54/b0de9905ee80aebd64c333bc112cacfe06849a9b5a7230a02dfde73e7aad/blis-0.7.4.tar.gz
+  sha256: 7daa615a97d4f28db0f332b710bfe1900b15d0c25841c6d727965e4fd91e09cf
+test:
+  imports:
+  - blis
+about:
+  home: https://github.com/explosion/cython-blis
+  PyPi: https://pypi.org/project/blis
+  summary: The Blis BLAS-like linear algebra library, as a self-contained C-extension.
+  license: BSD
