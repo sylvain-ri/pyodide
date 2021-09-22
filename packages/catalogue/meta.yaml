@@ -1,0 +1,14 @@
+package:
+  name: catalogue
+  version: 2.0.6
+source:
+  url: https://files.pythonhosted.org/packages/66/2a/5f81b0d2cad05f52b55e788a0f6be7f514b1ef3adeaefdff6ba94f49017b/catalogue-2.0.6.tar.gz
+  sha256: 336a35603f447167042ef504114d6befa46688f03f4c14dabdc633a44587b245
+test:
+  imports:
+    - catalogue
+about:
+  home: https://github.com/explosion/catalogue
+  PyPi: https://pypi.org/project/catalogue
+  summary: Super lightweight function registries for your library
+  license: MIT
